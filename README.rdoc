@@ -1,3 +1,49 @@
+myList instructions:
+
+Below is the content included with the original readme file provided by ruby when you install a new application
+but first here are a couple of other intstuctions you will need to follow to get ruby and rails up and running on
+your computer.
+
+First, visit www.railsintaller.org and download and open the 
+package to download all of the components needed.  
+
+
+Now that you've downloaded the kit let's get started!
+Open the downloaded TAR file to begin the installation and follow the onscreen instructions to setup GIT. This process takes about 20 minutes so I would go grab a cup of coffee and come back!
+
+Once installation is complete go ahead and open up Terminal under /Applications/Utilities
+
+Next we will run a few commands to make sure everything was setup correctly:
+
+$ git --version
+
+This will display what version of GIT you have.
+
+$ rvm info
+
+This will display information about your Ruby Version Manager environment.
+
+$ ruby -v
+
+This will display information about your Ruby version to ensure everything was setup properly.
+
+$ rails -v
+
+This will display information about your Rails version to ensure everything was setup properly.
+
+Next in order to view this web application you must navigate to the folder holding the application in terminal.
+(ex. $ cd myList)
+
+Once in the directory you can use terminal to start and stop the server
+
+To start the server:
+$ rails server
+
+To quit the server:
+$ (control + c)
+
+Visit http://localhost:3000 in your web browser to see the default Rails welcome page.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
