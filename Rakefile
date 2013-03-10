@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Sstoa::Application.load_tasks
+MyListDemo::Application.load_tasks

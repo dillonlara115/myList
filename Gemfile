@@ -6,12 +6,6 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'devise'
-gem 'omniauth-facebook'
-gem 'oauth2'
-gem 'omniauth'
-
-
 
 
 # Gems used only for assets and not required

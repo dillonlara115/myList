@@ -1,0 +1,17 @@
+<div data-role="header">
+	<h1>
+		<%= @list.title %>
+	</h1>
+</div>
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Item:</b>
+  <%= @list.item %>
+</p>
+
+<div data-role="footer" data-position="fixed">
+	<h3>
+		<%= link_to 'Edit', edit_list_path(@list) %> |
+		<%= link_to 'Back', lists_path %>
+	</h3>
+</div>
