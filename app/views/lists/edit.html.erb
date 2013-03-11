@@ -7,8 +7,10 @@
 </div>
 
 <div data-role="footer" data-position="fixed">
-	<h3>
-		<%= link_to 'Show', @list %> |
-		<%= link_to 'Back', lists_path %>
-	</h3>
+	<div data-role="navbar">
+        <ul>
+            <li><%= link_to 'Show', @list %> </li>
+            <li><%= link_to 'Back', lists_path %></li>
+        </ul>
+    </div>
 </div>
