@@ -13,12 +13,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div data-role="content">
 	<div data-role="page">
 
 		<%= yield %>
     <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 	</div>
+</div>
 </body>
 </html>
