@@ -11,8 +11,8 @@
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
         <ul>
-            <li><%= link_to 'Show', @list %> </li>
-            <li><%= link_to 'Back', lists_path %></li>
+            <li><%= link_to 'Show', @list, "data-transition" => "slide" %> </li>
+            <li><%= link_to 'Back', lists_path, "data-rel" => "back" %></li>
         </ul>
     </div>
 </div>

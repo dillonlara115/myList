@@ -5,7 +5,8 @@
 	<%= render 'form' %>
 </div>
 <div data-role="footer" data-position="fixed">
-	<h3>
-		<%= link_to 'Back', lists_path %>
-	</h3>
-</div>
+	<div data-role="navbar">
+	    <ul>
+	       <li><%= link_to 'Back', lists_path, "data-rel" => "back" %></li>
+	    </ul>
+	</div>
