@@ -1,4 +1,6 @@
 MyListDemo::Application.routes.draw do
+  get "profiles/show"
+
   get "contact/new"
 
   get "contact/contact"
