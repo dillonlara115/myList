@@ -1,2 +1,5 @@
-<h1>Contact#new</h1>
-<p>Find me in app/views/contact/new.html.erb</p>
+<%= form_tag do %>
+	<%= text_area_tag 'message', 'Report problems or misuse of application' %>
+	<%= text_field_tag 'email', 'Email Address' %>
+	<%= submit_tag "Send" %>
+<% end %>

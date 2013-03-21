@@ -5,7 +5,9 @@
  	<%= link_to 'Login', user_session_path, "data-role" => "button", "data-transition" => "flip"   %>
     <%= link_to 'Sign Up', new_user_registration_path, "data-role" => "button", "data-transition" => "flip"   %>
 </div>
-
+<center>
+	<%= link_to 'Report a problem', contact_new_path, "data-transition" => "slide" %>
+</center>
 <div data-role="footer" data-position="fixed">
-	<%= link_to 'contact', contact_contact_path, "data-transition" => "slide", "data-role" => "button" %>
+	<center><%= link_to 'contact', contact_contact_path, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>
 </div>
