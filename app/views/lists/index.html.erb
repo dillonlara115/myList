@@ -1,82 +1,20 @@
-<div data-role="header">
+<div data-role="header" data-theme="b">
   <h1>My lists</h1>
 </div>
   <% @lists.each do |list| %>
-    <div data-role="collapsible-set">
-      <div data-role="collapsible" data-collapsed="true">
+    <div data-role="collapsible" data-theme="b" data-content-theme="b">
         <h3><%= list.title %></h3>
-          <ul data-role="listview" data-divider-theme="" data-inset="true">
-            <li data-theme=""><%= link_to "View List", list_path(list), "data-transition" => "slide" %></li>
-            <li data-theme=""><%= link_to "Edit List", edit_list_path(list), "data-transition" => "slide" %></li>
-            <li data-theme=""><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, "data-transition" => "slide" %></li>
+          <ul data-role="listview" data-divider-theme="a" >
+            <li><%= link_to "View List", list_path(list), "data-transition" => "slide" %></li>
+            <li><%= link_to "Edit List", edit_list_path(list), "data-transition" => "slide" %></li>
+            <li><%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' } %></li>
           </ul>
-        </div>
-      </div>
+    </div>   
   <% end %>
-  
-
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : '438480572898894', // App ID from the App Dashboard
-     // channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File for x-domain communication
-      status     : true, // check the login status upon init?
-      cookie     : true, // set sessions cookies to allow your server to access the session?
-      xfbml      : true  // parse XFBML tags on this page?
-    });
-
-    // Additional initialization code such as adding Event Listeners goes here
-
-  storeInfo = function(){
-    FB.api('/me', function(response) {
-        localStorage.setItem('fb_me', JSON.stringify(response));
-        console.log('**User Info stored locally', response);
-      });
-      FB.api('/me/photos', function(response) {
-        
-        localStorage.setItem('fb_friends', JSON.stringify(response));
-        console.log('**Friends Info stored locally', response);
-      });
-    }
-
-  FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
-      // connected
-    } else if (response.status === 'not_authorized') {
-      // not_authorized
-    } else {
-      // not_logged_in
-    }
-   });
-
-  };
-
-  
-
-  // Load the SDK's source Asynchronously
-  // Note that the debug version is being actively developed and might 
-  // contain some type checks that are overly strict. 
-  // Please report such bugs using the bugs tool.
-  (function(d, debug){
-     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-     ref.parentNode.insertBefore(js, ref);
-   }(document, /*debug*/ false));
-</script>
 
 
-<fb:login-button onlogin="storeInfo();" login_text="Login with Facebook" fb-xfbml-state="rendered">
-<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1"></div>
-</fb:login-button>
-<br />
-
-
-<div data-role="footer" data-position="fixed">
-  <div data-role="navbar">
+<div data-role="footer" data-theme='b' data-position="fixed">
+  <div data-role="navbar" data-theme='b'>
     <ul>
        <li><%= link_to 'New List', new_list_path, "data-transition" => "slide"  %></li>
     </ul>

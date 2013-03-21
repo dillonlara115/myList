@@ -1,4 +1,4 @@
-<div data-role="header">
+<div data-role="header" data-theme="b">
 	<h1>Sign up</h1>
 </div>
 
@@ -14,8 +14,11 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Sign up" 'data-theme' => 'b' %></div>
 <% end %>
-<div data-role="footer" data-position="fixed">
-	<%= render "devise/shared/links" %>
+
+<div data-role="footer" data-position="fixed" data-theme='b'>
+  <div data-role="navbar">
+    <%= render "devise/shared/links" %>
+  </div>
 </div>
