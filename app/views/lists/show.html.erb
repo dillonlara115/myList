@@ -1,6 +1,7 @@
 <div data-role="header" data-theme="b">
 	<h1>
 		<%= @list.title %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
 	</h1>
 </div>
 <p id="notice"><%= notice %></p>

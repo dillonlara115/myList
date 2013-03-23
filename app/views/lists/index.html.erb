@@ -1,5 +1,6 @@
 <div data-role="header" data-theme="b">
   <h1>My lists</h1>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
 </div>
   <% @lists.each do |list| %>
     <div data-role="collapsible" data-theme="b" data-content-theme="b">

@@ -2,8 +2,13 @@
   <h1>My list</h1>
 </div>
  <div data-role="content">
- 	<%= link_to 'Login', user_session_path, "data-role" => "button", "data-transition" => "flip"   %>
-    <%= link_to 'Sign Up', new_user_registration_path, "data-role" => "button", "data-transition" => "flip"   %>
+ 	<% if user_signed_in? %>
+ 		<%= link_to 'Mylist', lists_path, "data-role" => "button", "data-transition" => "flip" %>
+ 		<%= link_to "Logout", destroy_user_session_path, method: :delete, "data-role" => "button", "data-transition" => "flip"  %>
+ 	<% else %>
+	 	<%= link_to 'Login', user_session_path, "data-role" => "button", "data-transition" => "flip"   %>
+	    <%= link_to 'Sign Up', new_user_registration_path, "data-role" => "button", "data-transition" => "flip"   %>
+    <% end %>
 </div>
 <center>
 	<%= link_to 'Report a problem', contact_new_path, "data-transition" => "slide" %>
