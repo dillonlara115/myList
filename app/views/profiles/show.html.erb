@@ -1,2 +1,12 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div data-role="header" data-theme="b">
+	<h1>My list</h1>
+	<%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
+</div>
+
+<%= link_to 'View Mylists', lists_path, "data-role" => "button", "data-transition" => "flip", 'data-icon' => "arrow-r", 'data-theme' => 'b', 'data-iconpos' => "right" %>
+<%= link_to 'Edit Profile', edit_user_registration_path, "data-role" => "button", "data-transition" => "flip", 'data-icon' => "arrow-r", 'data-theme' => 'b', 'data-iconpos' => "right" %>
+
+
+<div data-role="footer" data-theme='b' data-position="fixed">
+	<center><%= link_to "Back", :back, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>
+</div>

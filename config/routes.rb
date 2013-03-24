@@ -1,4 +1,9 @@
 MyListDemo::Application.routes.draw do
+  resources :lists do
+    resources :tasks
+  end
+
+
   get "profiles/show"
 
   get "contact/new"
@@ -9,7 +14,6 @@ MyListDemo::Application.routes.draw do
 
   devise_for :users
 
-  resources :lists
 
 
   # The priority is based upon order of creation:

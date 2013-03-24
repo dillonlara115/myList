@@ -1,3 +1,8 @@
+<div data-role="header" data-theme="b">
+  <h1>My list</h1>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
+</div>
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -27,3 +32,9 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 
 <%= link_to "Back", :back %>
+
+
+
+<div data-role="footer" data-theme='b' data-position="fixed">
+  <center><%= link_to "Back", :back, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>
+</div>

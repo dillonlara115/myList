@@ -10,6 +10,13 @@
   <%= @list.item %>
 </p>
 
+<ul>
+  <% @list.tasks.each do |task| %>
+    <li><%= task.description %></li>
+  <% end %>
+</ul>
+
+
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
         <ul>
