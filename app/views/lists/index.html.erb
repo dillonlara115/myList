@@ -15,6 +15,10 @@
 
 
 <div data-role="footer" data-theme='b' data-position="fixed">
-  <%= link_to 'New List', new_list_path, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
-  <%= link_to "Back", :back, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %>
+  <div data-role="navbar">
+    <ul>
+      <li><%= link_to 'New List', new_list_path, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %></li>
+      <li><%= link_to "Back", :back, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></li>
+    </ul>
+  </div>
 </div>

@@ -1,7 +1,6 @@
 <div data-role="header" data-position="fixed" data-theme="b">
 	<h1>
 		<%= @list.title %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
 	</h1>
 </div>
 <center>
@@ -11,22 +10,22 @@
 </p>
 </center>
 
-<h3>Uncomplete</h3>
+<h3>myList:</h3>
 <ul data-role="listview" data-inset="true">
   <% @list.tasks.incomplete.each do |task| %>
     <li><%= link_to task.description, complete_task_path(@list.id,task.id), 'data-mini' => 'true', 'data-icon' => "check", 'data-iconpos' => "right", 'data-inline' => 'true' %> </li>
   <% end %>
 </ul>
-
+<!--
 <h3>Completed</h3>
 <ul data-role="listview" data-inset="true">
   <% @list.tasks.completed.each do |task| %>
     <li><%= task.description %></li>
   <% end %>
 </ul>
+-->
 
-
-<h3>Add items/tasks:</h3>
+<h4>Add items/tasks:</h4>
 <%= form_for [@list, @list.tasks.new] do |f| %>
 
 <p><%= f.text_field :description, 'name' => "textinput-hide", 'id' => "textinput-hide", 'placeholder' => "enter tasks here - cannot be blank" %> <%= f.submit 'Add to list' %></p>

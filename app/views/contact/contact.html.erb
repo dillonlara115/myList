@@ -1,5 +1,5 @@
 <div data-role="header" data-position="fixed" data-theme="b">
-  <h1>My lists</h1>
+  <h1>Mylist</h1>
 </div>
 
 <%= form_tag do %>
@@ -9,6 +9,6 @@
 <% end %>
 
 
-<div data-role="footer" data-position="fixed">
+<div data-role="footer" data-theme='b' data-position="fixed">
 	<center><%= link_to 'Back', lists_path, "data-rel" => "back", "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>
 </div>

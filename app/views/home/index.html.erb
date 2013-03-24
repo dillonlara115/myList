@@ -1,5 +1,5 @@
 <div data-role="header" data-position="fixed" data-theme="b">
-  <h1>My list</h1>
+  <h1>Mylist</h1>
 </div>
  <div data-role="content">
  	<% if user_signed_in? %>
@@ -13,6 +13,6 @@
 <center>
 	<%= link_to 'Report a problem', contact_new_path, "data-transition" => "slide" %>
 </center>
-<div data-role="footer", data-theme='b' data-position="fixed">
+<div data-role="footer" data-theme='b' data-position="fixed">
 	<center><%= link_to 'contact', contact_contact_path, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>
 </div>
