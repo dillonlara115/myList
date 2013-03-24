@@ -4,9 +4,8 @@
     <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
 	</h1>
 </div>
-<p id="notice"><%= notice %></p>
 <p>
-  <b>Item:</b>
+  <b>Description:</b>
   <%= @list.item %>
 </p>
 
@@ -16,6 +15,11 @@
   <% end %>
 </ul>
 
+<%= form_for [@list, @task] do |f| %>
+
+<p><%= f.text_field :description %> <%= f.submit %></p>
+
+<% end %>
 
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
