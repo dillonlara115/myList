@@ -1,27 +1,39 @@
-<div data-role="header" data-theme="b">
+<div data-role="header" data-position="fixed" data-theme="b">
 	<h1>
 		<%= @list.title %>
     <%= link_to "Logout", destroy_user_session_path, method: :delete, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true"  %>
 	</h1>
 </div>
+<center>
 <p>
   <b>Description:</b>
   <%= @list.item %>
 </p>
+</center>
 
-<ul>
-  <% @list.tasks.each do |task| %>
+<h3>Uncomplete</h3>
+<ul data-role="listview" data-inset="true">
+  <% @list.tasks.incomplete.each do |task| %>
+    <li><%= link_to task.description, complete_task_path(@list.id,task.id), 'data-mini' => 'true', 'data-icon' => "check", 'data-iconpos' => "right", 'data-inline' => 'true' %> </li>
+  <% end %>
+</ul>
+
+<h3>Completed</h3>
+<ul data-role="listview" data-inset="true">
+  <% @list.tasks.completed.each do |task| %>
     <li><%= task.description %></li>
   <% end %>
 </ul>
 
-<%= form_for [@list, @task] do |f| %>
 
-<p><%= f.text_field :description %> <%= f.submit %></p>
+<h3>Add items/tasks:</h3>
+<%= form_for [@list, @list.tasks.new] do |f| %>
+
+<p><%= f.text_field :description, 'name' => "textinput-hide", 'id' => "textinput-hide", 'placeholder' => "enter tasks here - cannot be blank" %> <%= f.submit 'Add to list' %></p>
 
 <% end %>
 
-<div data-role="footer" data-position="fixed">
+<div data-role="footer" data-position="fixed" data-theme="b">
 	<div data-role="navbar">
         <ul>
             <li><%= link_to 'Edit', edit_list_path(@list), "data-transition" => "slide" %> </li>
@@ -29,3 +41,5 @@
         </ul>
     </div>
 </div>
+
+

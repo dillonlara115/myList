@@ -14,7 +14,7 @@ class ListsController < ApplicationController
   # GET /lists/1.json
   def show
     @list = List.find(params[:id])
-    @task = @list.tasks.new
+    #@task = @list.tasks.new
     
 
     respond_to do |format|

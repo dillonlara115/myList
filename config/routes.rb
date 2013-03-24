@@ -3,6 +3,7 @@ MyListDemo::Application.routes.draw do
     resources :tasks
   end
 
+  match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task
 
   get "profiles/show"
 
