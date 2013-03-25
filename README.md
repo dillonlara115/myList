@@ -1,3 +1,8 @@
+MyList:
+
+Mylist is a Ruby on Rails based mobile application for creating and managing lists.  Mylist is being developed for elementary purposes for a current class at Full Sail University online which I am currently attending.
+Below are some basic instructions to get the site up and running locally for testing.
+
 myList instructions:
 
 Below is the content included with the original readme file provided by ruby when you install a new application
