@@ -8,10 +8,12 @@
  	<% else %>
 	 	<%= link_to 'Login', user_session_path, "data-role" => "button", "data-transition" => "flip"   %>
 	    <%= link_to 'Sign Up', new_user_registration_path, "data-role" => "button", "data-transition" => "flip"   %>
+		<%= link_to 'Sign in with Facebook', '/auth/facebook', "data-role" => "button", "data-transition" => "flip"   %>
     <% end %>
 </div>
 <center>
-	<%= link_to 'Report a problem', contact_new_path, "data-transition" => "slide" %>
+	<%= link_to 'Report a problem', contact_new_path, "data-transition" => "slide" %><br />
+	<%= link_to 'Terms and Conditions', terms_index_path, "data-transition" => "slide" %>
 </center>
 <div data-role="footer" data-theme='b' data-position="fixed">
 	<center><%= link_to 'contact', contact_contact_path, "data-transition" => "slide", "data-role" => "button", "data-inline" => "true" %></center>

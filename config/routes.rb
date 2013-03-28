@@ -1,10 +1,16 @@
 MyListDemo::Application.routes.draw do
+  devise_for :users
+  resources :authentications
   resources :lists do
     resources :tasks
   end
 
+#updates file location path of pages
   match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task
 
+  match '/auth/:provider/callback' => 'authentications#create'
+
+#list of pages created using scaffolding
   get "profiles/show"
 
   get "contact/new"
@@ -12,8 +18,10 @@ MyListDemo::Application.routes.draw do
   get "contact/contact"
 
   get "home/index"
+#created from scratch
+  get "terms/index"
 
-  devise_for :users
+  
 
 
 

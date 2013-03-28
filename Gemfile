@@ -12,6 +12,7 @@ gem 'mysql2'
 gem 'jquery_mobile_rails'
 gem 'nifty-generators'
 gem 'omniauth-facebook'
+gem 'authbuttons-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,3 +42,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
