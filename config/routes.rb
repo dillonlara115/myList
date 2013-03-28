@@ -18,6 +18,8 @@ MyListDemo::Application.routes.draw do
   get "contact/contact"
 
   get "home/index"
+
+  get "copyright/index"
 #created from scratch
   get "terms/index"
 
